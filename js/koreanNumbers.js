@@ -25,10 +25,14 @@ function getRandomNumber(min, max) {
 function getStringFromNumber(n) {
   let inSinoKorean = '';
   if(n > 10) {
-    inSinoKorean += sinoKorean[Math.floor(n / 10)] + '십';
-    console.log(Math.floor(n / 10));
+    if(n >= 11 && n <= 19) {
+      inSinoKorean += '십';
+      inSinoKorean += sinoKorean[n%10];
+    }
+    else {
+      inSinoKorean += sinoKorean[Math.floor(n / 10)] + '십';
     inSinoKorean += sinoKorean[n%10];
-    console.log(n%10);
+    }
   }
   else {
     inSinoKorean = sinoKorean[n]
