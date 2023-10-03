@@ -66,10 +66,13 @@ body{
   }
   
   .card__face--front {
+    color:rgb(29, 29, 29);
+    font-weight: bold;
     background: #CD2E3A;
   }
   
   .card__face--back {
+    color:white;
     background: #0047A0;
     transform: rotateY(180deg);
     font-size: 6vw;
