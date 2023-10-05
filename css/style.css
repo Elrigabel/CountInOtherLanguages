@@ -80,7 +80,7 @@ body{
 
   /*------------- Button next ------------- */
   
-  button {
+  #nextNumber {
     width: 7vw;
     height: 7vw;
     border-radius: 50%;
@@ -93,7 +93,7 @@ body{
     margin: auto;
   }
 
-  button:hover {
+  #nextNumber:hover {
     opacity: 1;
     cursor: pointer;
     transition: 1s;
