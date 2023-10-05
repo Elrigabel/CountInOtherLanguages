@@ -24,18 +24,28 @@ function getRandomNumber(min, max) {
 
 function getStringFromNumber(n) {
   let inSinoKorean = '';
-  if(n > 10) {
-    if(n >= 11 && n <= 19) {
-      inSinoKorean += '십';
-      inSinoKorean += sinoKorean[n%10];
-    }
-    else {
-      inSinoKorean += sinoKorean[Math.floor(n / 10)] + '십';
-    inSinoKorean += sinoKorean[n%10];
-    }
-  }
-  else {
-    inSinoKorean = sinoKorean[n]
+  let stringN = n.toString();
+  switch (stringN.length) {
+    //100 -> 999
+    case 3:
+      break;
+    //10 -> 99
+    case 2:
+      if (n >= 11 && n <= 19) {
+        inSinoKorean += '십';
+        inSinoKorean += sinoKorean[n%10];
+      }
+      else {
+        inSinoKorean += sinoKorean[Math.floor(n / 10)] + '십';
+        inSinoKorean += sinoKorean[n%10];
+      }
+      break;
+    //0 -> 9
+    case 1:
+      inSinoKorean = sinoKorean[n];
+      break;
+    default:
+      console.log("Erreur");
   }
   
   console.log(inSinoKorean);
