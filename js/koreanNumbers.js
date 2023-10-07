@@ -17,6 +17,8 @@ let buttonSubmit = document.getElementById("submit");
 buttonSubmit.addEventListener("click", () => {
   generateMin = parseInt(document.getElementById("inputMin").value);
   generateMax = parseInt(document.getElementById("inputMax").value);
+  theCardNumber.innerHTML = '';
+  theCardSinoKorean.innerHTML = '';
 });
 
 nextNumberButton.addEventListener("click", () => {
