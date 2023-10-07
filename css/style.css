@@ -132,7 +132,7 @@ h1 {
   transition: all 250ms;
 
   margin: auto;
-  margin-top: 2vh;
+  margin-top: 5vh;
 }
 
 #submit:hover, #submit:focus {
@@ -154,6 +154,19 @@ h1 {
 }
 
 /*----- Input ------ */
+.inputbox {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  margin-top: 0.3vw;
+}
+
+p {
+  margin-right:2vw;
+  margin-left:2vw;
+  font-size: 1vw;
+}
+
 input {
   width: 7vw;
   height: 3vw;
@@ -198,7 +211,8 @@ input[type=number] {
   .scene {
       width: 50vw;
       height: 30vw;
-      margin-top: 5vw;
+      margin:auto;
+      margin-top: 3vw;
   }
   .card {
       font-size: 16vw;
@@ -208,18 +222,27 @@ input[type=number] {
     font-size: 8vw;
   }
 
+  .inputbox {
+    margin-top: 5vw;
+  }
+
+  p {
+    margin-right:4vw;
+    margin-left:4vw;
+    font-size: 4vw;
+  }
+
   input {
     width: 24vw;
     height: 8vw;
     font-size: 5vw;
-    margin-top: 5vw;
   }
 
   #submit {
     width: 20vw;
     height: 8vw;
     font-size: 3.5vw;
-    margin-top: 5vw;
+    margin-top: 3vw;
     margin-bottom: 3vw;
   }
 
