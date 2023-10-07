@@ -132,7 +132,7 @@ h1 {
   transition: all 250ms;
 
   margin: auto;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 #submit:hover, #submit:focus {
@@ -164,7 +164,7 @@ h1 {
 p {
   margin-right:2vw;
   margin-left:2vw;
-  font-size: 1vw;
+  font-size: 1.3vw;
 }
 
 input {
