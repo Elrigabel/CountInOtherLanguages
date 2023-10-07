@@ -184,7 +184,7 @@ input[type=number] {
 
 /*------------- Responsive ------------- */
 
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 750px) {
   
   header {
     height: 15vh;
@@ -222,8 +222,8 @@ input[type=number] {
   }
 
   #nextNumber {
-    width: 15vw;
-    height: 15vw;
+    width: 20vw;
+    height: 20vw;
     margin-top: 5vw;
   }
 
