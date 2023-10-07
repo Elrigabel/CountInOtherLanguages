@@ -44,7 +44,7 @@ nextNumberButton.addEventListener("click", () => {
     theCardSinoKorean.innerHTML = '';
   }
   else {
-    theCardNumber.innerHTML = "The end";
+    theCardNumber.innerHTML = "End";
     theCardSinoKorean.innerHTML = "끝"
   }
   
