@@ -3,6 +3,9 @@ const sinoKorean = ['공', '일', '이', '삼', '사', '오', '육', '칠', '팔
 const nativeKorean = ['공', '하나', '둘', '셋', '넷', '다섯',
  '여삿', '일곱', '여덟', '아홉', '열'];
 
+let generatedNumbers = [];
+let count = 0;
+
 let number = 0;
 
 let generateMin = 0;
@@ -15,17 +18,36 @@ let theCardSinoKorean = document.getElementsByClassName("card__face--back")[0];
 let buttonSubmit = document.getElementById("submit");
 
 buttonSubmit.addEventListener("click", () => {
-  generateMin = parseInt(document.getElementById("inputMin").value);
-  generateMax = parseInt(document.getElementById("inputMax").value);
-  theCardNumber.innerHTML = '';
-  theCardSinoKorean.innerHTML = '';
+  let valMin = parseInt(document.getElementById("inputMin").value);
+  let valMax = parseInt(document.getElementById("inputMax").value);
+  if (valMin < valMax) {
+    generateMin = valMin;
+    generateMax = valMax;
+    theCardNumber.innerHTML = '';
+    theCardSinoKorean.innerHTML = '';
+    generatedNumbers = [];
+    count = 0;
+    generateRandomNumbers(generateMin, generateMax);
+  }
 });
 
 nextNumberButton.addEventListener("click", () => {
-  number = getRandomNumber(generateMin, generateMax);
-  console.log(number);
-  theCardNumber.innerHTML = number;
-  theCardSinoKorean.innerHTML = getStringFromNumber(number);
+  if (count != generatedNumbers.length) {
+    number = generatedNumbers[count];
+    count++;
+    console.log(number);
+    theCardNumber.innerHTML = number;
+    theCardSinoKorean.innerHTML = getStringFromNumber(number);
+  }
+  else if (generatedNumbers.length === 0){
+    theCardNumber.innerHTML = '';
+    theCardSinoKorean.innerHTML = '';
+  }
+  else {
+    theCardNumber.innerHTML = "The end";
+    theCardSinoKorean.innerHTML = "끝"
+  }
+  
 });
 
 function getRandomNumber(min, max) {
@@ -89,6 +111,30 @@ function get10(stringN) {
     string += sinoKorean[number];
   }
   return string;
+}
+
+function generateRandomNumbers(min, max) {
+  let n;
+  let added = false;
+  for (let index = 0; index < max - min + 1; index++) {
+    while(added == false) {
+      n = getRandomNumber(min, max);
+      if (!existIn(generatedNumbers, n)) {
+        generatedNumbers[index] = n;
+        added = true;
+      }
+    }
+    added = false;
+  }
+}
+
+function existIn(tab, value) {
+  for (let index = 0; index < tab.length; index++) {
+    if(value === tab[index]) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /* --------- Flip the card ----------*/
