@@ -120,9 +120,9 @@ h1 {
 
 /*----- Submit button ------ */
 #submit {
-  width: 6vw;
-  height: 2.3vw;
-  font-size: 1vw;
+  width: 8vw;
+  height: 4vw;
+  font-size: 1.5vw;
 
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -201,7 +201,7 @@ input[type=number] {
       margin-top: 5vw;
   }
   .card {
-      font-size: 12vw;
+      font-size: 16vw;
   }
 
   .card__face--back {
@@ -216,9 +216,11 @@ input[type=number] {
   }
 
   #submit {
-    width: 18vw;
-    height: 7vw;
-    font-size: 3vw;
+    width: 20vw;
+    height: 8vw;
+    font-size: 3.5vw;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
   }
 
   #nextNumber {
