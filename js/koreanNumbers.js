@@ -1,4 +1,5 @@
-const sinoKorean = ['공', '일', '이', '삼', '사', '오', '육', '칠', '팔', '구', '십', '백'];
+const sinoKorean = ['공', '일', '이', '삼', '사', '오', 
+'육', '칠', '팔', '구', '십', '백', '천'];
 
 const nativeKorean = ['공', '하나', '둘', '셋', '넷', '다섯',
  '여삿', '일곱', '여덟', '아홉', '열'];
@@ -58,10 +59,22 @@ function getStringFromNumber(n) {
   let inSinoKorean = '';
   let stringN = n.toString();
   switch (stringN.length) {
+    //1000 -> 9999
+    case 4:
+      inSinoKorean += get1000(stringN[0]);
+      if (parseInt(stringN[1]) != 0) {
+        inSinoKorean += get100(stringN[stringN.length-3]);
+      if (parseInt(stringN[-2]) != 0 || parseInt(stringN[-1]) != 0)
+        console.log("n%100 : " + n%100);
+        inSinoKorean += get10(stringN[stringN.length-2] + stringN[stringN.length-1]);
+      }
+      break;
     //100 -> 999
     case 3:
       inSinoKorean += get100(stringN[0]);
-      inSinoKorean += get10(stringN[stringN.length-2] + stringN[stringN.length-1]);
+      if (n > 100) {
+        inSinoKorean += get10(stringN[stringN.length-2] + stringN[stringN.length-1]);
+      }
       break;
     //10 -> 99
     case 2:
@@ -77,6 +90,20 @@ function getStringFromNumber(n) {
 
   console.log(inSinoKorean);
   return inSinoKorean;
+}
+
+function get1000(stringN) {
+  let number = parseInt(stringN);
+  let string = '';
+  console.log(number);
+  if (number == 1) {
+    string += sinoKorean[12];
+  }
+  else {
+    string += sinoKorean[number];
+    string += sinoKorean[12];
+  }
+  return string;
 }
 
 function get100(stringN) {
