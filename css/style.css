@@ -118,8 +118,8 @@ h1 {
 
 /*------------- Set number generation ------------- */
 
-/*----- Submit button ------ */
-#submit {
+/*----- Buttons set ------ */
+.buttonNumbers {
   width: 8vw;
   height: 3vw;
   font-size: 1.5vw;
@@ -135,17 +135,17 @@ h1 {
   margin-top: 3vh;
 }
 
-#submit:hover, #submit:focus {
+.buttonNumbers:hover, .buttonNumbers:focus {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   color: rgba(0, 0, 0, 0.65);
 }
 
-#submit:hover {
+.buttonNumbers:hover {
   transform: translateY(-1px);
 }
 
-#submit:active {
+.buttonNumbers:active {
   background-color: #F0F0F1;
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;

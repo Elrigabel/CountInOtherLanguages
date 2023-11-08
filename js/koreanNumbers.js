@@ -17,8 +17,15 @@ let nextNumberButton = document.getElementById("nextNumber");
 let theCardNumber = document.getElementsByClassName("card__face--front")[0];
 let theCardSinoKorean = document.getElementsByClassName("card__face--back")[0];
 let buttonSubmit = document.getElementById("submit");
+let setNumbers = document.getElementById("setNumbers");
 
 buttonSubmit.addEventListener("click", () => {
+  document.getElementById("theScene").style.display = "inline-block";
+  nextNumberButton.style.display = "block";
+  setNumbers.style.display = "block";
+  document.getElementById("inputs").style.display = "none";
+  buttonSubmit.style.display = "none"
+
   let valMin = parseInt(document.getElementById("inputMin").value);
   let valMax = parseInt(document.getElementById("inputMax").value);
   if (valMin < valMax) {
@@ -31,6 +38,14 @@ buttonSubmit.addEventListener("click", () => {
     generateRandomNumbers(generateMin, generateMax);
   }
 });
+
+setNumbers.addEventListener("click", () => {
+  document.getElementById("theScene").style.display = "none";
+  nextNumberButton.style.display = "none";
+  setNumbers.style.display = "none";
+  document.getElementById("inputs").style.display = "flex";
+  buttonSubmit.style.display = "block"
+})
 
 nextNumberButton.addEventListener("click", () => {
   if (count != generatedNumbers.length) {

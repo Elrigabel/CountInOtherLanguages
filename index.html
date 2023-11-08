@@ -14,21 +14,25 @@
 
         <div class="box">
 
-            <div class="inputbox">
+            <div id="inputs" class="inputbox">
                 <input id="inputMin" type="number" min="0" max="999" value="0">
                 <p>to</p>
                 <input id="inputMax" type="number" min="0" max="999" value="999">
             </div>
-            <button id="submit">Set</button>
+            <button id="submit" class="buttonNumbers">Set</button>
 
-            <div class="scene scene--card">
+            <div class="countInformations"></div>
+
+            <button id="setNumbers" class="buttonNumbers" style="display : none">Set count</button>
+
+            <div id="theScene" class="scene scene--card" style="display: none">
                 <div class="card">
                     <div class="card__face card__face--front"></div>
                     <div class="card__face card__face--back"></div>
                 </div>
             </div>
 
-            <button id="nextNumber"></button>
+            <button id="nextNumber" style="display: none"></button>
 
         </div>
 
