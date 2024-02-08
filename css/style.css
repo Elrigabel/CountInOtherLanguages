@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Nanum+Myeongjo&display=swap');
 
 html {
+  height: 100%;
+  width: 100%;
   font-family: 'Lora', serif;
   font-family: 'Nanum Myeongjo', serif;
   color: black;
@@ -10,6 +12,8 @@ html {
 
 body{
   width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .box {
@@ -22,16 +26,89 @@ body{
 /*------------- Header ------------- */
 
 header {
-  height: 20vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+ul {
   display: flex;
-  justify-content:center;
-  text-align: center;
+  width: 100%;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:rgba(205,46,58,0.8);
+  color: #F0F0F1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li {
+  float: right;
+  width: fit-content;
+  margin: 1vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li div {
+  border-radius: 5px;
+  margin-right: 4vh;
+  margin-left: 4vh;
+  font-size: 3vh;
+  padding: 10px;
+  background-color:rgba(174,36,48,0.8);
+}
+
+li div:hover {
+  background-color:rgba(133,29,38,0.8);
+}
+
+select {
+  margin-right: 4vh;
+  margin-left: 4vh;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 3vh;
+  font-family: 'Lora', serif;
+  color: #F0F0F1;
+  background-color:rgba(174,36,48,0.8);
+}
+
+
+
+img {
+  width: 10vh;
+  height: 10vh;
+}
+
+/*------------- Footer ------------- */
+
+footer {
+  width: 100%;
+  margin-top: 10vh;
+  background-color: #0047A0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  color: #F0F0F1;
+}
+
+/*------------- Banner ------------- */
+
+.banner {
+  height: 35vh;
+  display: flex;
   background-image: url(../images/korean_temple.jpg);
   background-size: cover;
 }
 
 h1 {
   margin: auto;
+  margin-bottom: 5vh;
   color:rgb(0, 0, 0);
   font-size: 2.5vw;
   background-color: rgba(255, 255, 255, 0.5);
